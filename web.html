@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan Patil | Full-Stack Developer & Software Engineer</title>
+  <meta name="description" content="Portfolio & Resume of Rohan Patil - Full-Stack Developer and IT Engineering student specializing in scalable web applications, REST APIs, and AI integrations." />
+  <meta name="keywords" content="Rohan Patil, Full Stack Developer, Software Engineer, Portfolio, Resume, Node.js, React, JavaScript, MMCOE Pune" />
+  <meta name="author" content="Rohan Patil" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- Main Navigation -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-badge">RP</span>
+        <span>Rohan<span class="gradient-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button class="btn btn-primary btn-sm open-resume-btn" id="navResumeBtn">
+          <span>View Resume</span>
+          <span>📄</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay & Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-menu" id="mobileNavMenu">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#experience" class="nav-link">Education & Experience</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <button class="btn btn-primary open-resume-btn" style="width: 100%; margin-top: 0.5rem;">
+      <span>View & Print Resume</span> 📄
+    </button>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Internship & Full-Time Roles</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Rohan Patil</span>
+            </h1>
+
+            <div class="hero-subtitle">
+              <span>I build as a </span>
+              <span id="typingText" class="gradient-text"></span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="hero-description">
+              Passionate IT Engineering student and full-stack software developer crafting responsive, modern web applications, resilient backend architectures, and AI-powered interfaces. Committed to writing clean code and shipping intuitive digital experiences.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <span>⚡</span>
+              </a>
+              <button class="btn btn-secondary open-resume-btn">
+                <span>Resume CV</span>
+                <span>📄</span>
+              </button>
+              <a href="#contact" class="btn btn-outline">
+                <span>Let's Talk</span>
+                <span>✉️</span>
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:rohanpatil20077@gmail.com" class="hero-social-link" title="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="profile-card-wrapper">
+              <div class="profile-glow-ring"></div>
+              <div class="profile-image-container">
+                <img src="assets/profile.jpg" alt="Rohan Patil Profile" class="profile-img" />
+              </div>
+              <div class="floating-badge badge-top-left">
+                <span>⚡</span>
+                <span>Full-Stack Ready</span>
+              </div>
+              <div class="floating-badge badge-bottom-right">
+                <span>🚀</span>
+                <span>Node.js & React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <div class="container">
+      <div class="stats-banner">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Projects & APIs Built</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Responsive & Scalable</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">MMCOE</div>
+            <div class="stat-label">IT Engineer</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">2029</div>
+            <div class="stat-label">Graduation Year</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Driven by Curiosity, Grounded in Engineering</h2>
+          <p class="section-subtitle">A quick introduction to my technical mindset and background.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am an aspiring software engineer pursuing my B-Tech in Information Technology at <strong>Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune</strong>. My enthusiasm centers around building high-impact web software that solves real user challenges.
+            </p>
+            <p>
+              From architecting RESTful services with Node.js and Express to building interactive frontend user interfaces, I enjoy bridging the gap between elegant UI design and scalable server architectures. I also have hands-on experience experimenting with AI API integrations and IoT telemetry data monitoring.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <div class="highlight-icon">💻</div>
+                <div class="highlight-info">
+                  <h4>Full-Stack Capabilities</h4>
+                  <p>Proficient in building end-to-end web apps with modern JavaScript.</p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">🎯</div>
+                <div class="highlight-info">
+                  <h4>Rapid Learner</h4>
+                  <p>Quick to adopt new toolsets, frameworks, and deployment workflows.</p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">🧠</div>
+                <div class="highlight-info">
+                  <h4>Problem Solver</h4>
+                  <p>Solid grasp of data structures, algorithms, and OOP paradigms.</p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <div class="highlight-icon">🤝</div>
+                <div class="highlight-info">
+                  <h4>Collaborative Mindset</h4>
+                  <p>Experienced in team projects, Git version control, and clear communication.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-meta">
+            <div class="about-meta-card">
+              <div class="meta-header">
+                <img src="assets/profile.jpg" alt="Rohan Patil" class="meta-avatar" />
+                <div class="meta-title">
+                  <h3>Rohan Patil</h3>
+                  <p>IT Engineer @ MMCOE</p>
+                </div>
+              </div>
+
+              <ul class="meta-list">
+                <li class="meta-item">
+                  <span class="meta-label">Location:</span>
+                  <span class="meta-value">Pune, Maharashtra, India</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-label">Specialization:</span>
+                  <span class="meta-value">Full Stack Web & AI Systems</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-label">Core Languages:</span>
+                  <span class="meta-value">JavaScript, Python, C++</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-label">Availability:</span>
+                  <span class="meta-value" style="color: var(--accent-emerald);">Internship / Full-Time</span>
+                </li>
+                <li class="meta-item">
+                  <span class="meta-label">Preferred Deployment:</span>
+                  <span class="meta-value">Vercel, Netlify, Render</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Tools and languages I utilize to craft modern software solutions.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🌐</div>
+              <h3 class="category-title">Frontend Engineering</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">HTML5 & Semantic Web</span>
+              <span class="skill-pill">CSS3 & Glassmorphism</span>
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">React.js</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">DOM Manipulation</span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">⚙️</div>
+              <h3 class="category-title">Backend & APIs</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express.js</span>
+              <span class="skill-pill">RESTful API Design</span>
+              <span class="skill-pill">JWT Authentication</span>
+              <span class="skill-pill">Middleware Architecture</span>
+              <span class="skill-pill">Python Backend</span>
+              <span class="skill-pill">API Security</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🗄️</div>
+              <h3 class="category-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">MongoDB & Mongoose</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">JSON File Database</span>
+              <span class="skill-pill">Local Storage & State</span>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🛠️</div>
+              <h3 class="category-title">DevOps & Tooling</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">Vercel Deployment</span>
+              <span class="skill-pill">Netlify Hosting</span>
+              <span class="skill-pill">Postman API Testing</span>
+              <span class="skill-pill">VS Code & Antigravity</span>
+              <span class="skill-pill">npm & Node Package Tools</span>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🤖</div>
+              <h3 class="category-title">AI & Emerging Tech</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">LLM API Integration</span>
+              <span class="skill-pill">AI Study Assistant Tooling</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Conversational Chatbots</span>
+              <span class="skill-pill">EV Telemetry Review</span>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">📚</div>
+              <h3 class="category-title">IT & Computer Science</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Data Structures & Algo</span>
+              <span class="skill-pill">Object-Oriented (OOP)</span>
+              <span class="skill-pill">DBMS & SQL</span>
+              <span class="skill-pill">Software Engineering Life Cycle</span>
+              <span class="skill-pill">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Projects That Make an Impact</h2>
+          <p class="section-subtitle">Real-world applications built with clean architectures and responsive interfaces.</p>
+        </div>
+
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+          <button class="filter-btn" data-filter="ai">AI & Web</button>
+          <button class="filter-btn" data-filter="systems">Systems & IoT</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: AI Study Assistant -->
+          <div class="project-card" data-category="ai fullstack">
+            <div class="project-preview">
+              <img src="assets/project_study.jpg" alt="AI Study Assistant" class="project-img" />
+              <span class="project-tag-floating">AI + Full Stack</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                <span>AI Study Assistant</span>
+                <span style="font-size: 1.1rem;">🧠</span>
+              </h3>
+              <p class="project-desc">
+                An intelligent educational platform that generates dynamic timetables, tracks homework tasks, summarizes study notes using AI models, and provides interactive progress analytics.
+              </p>
+              <div class="project-tech-stack">
+                <span class="project-tech-pill">Node.js</span>
+                <span class="project-tech-pill">Express</span>
+                <span class="project-tech-pill">AI Models</span>
+                <span class="project-tech-pill">JavaScript</span>
+                <span class="project-tech-pill">REST API</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">Request Demo</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View Code ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: MMCOE SmartHub -->
+          <div class="project-card" data-category="fullstack">
+            <div class="project-preview">
+              <img src="assets/project_smarthub.jpg" alt="MMCOE SmartHub" class="project-img" />
+              <span class="project-tag-floating">Campus Portal & API</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                <span>MMCOE SmartHub 3.0</span>
+                <span style="font-size: 1.1rem;">🏛️</span>
+              </h3>
+              <p class="project-desc">
+                A centralized academic portal and API ecosystem designed for college campus services. Provides student management, course directories, event updates, and authenticated API endpoints.
+              </p>
+              <div class="project-tech-stack">
+                <span class="project-tech-pill">JavaScript</span>
+                <span class="project-tech-pill">Express.js</span>
+                <span class="project-tech-pill">JSON DB</span>
+                <span class="project-tech-pill">CSS3 Glass</span>
+                <span class="project-tech-pill">Auth</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">Request Demo</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View Code ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: EV Smart Charger Management -->
+          <div class="project-card" data-category="systems">
+            <div class="project-preview">
+              <div class="project-banner-svg">
+                <span>⚡🚗🔋</span>
+              </div>
+              <span class="project-tag-floating">Systems & IoT</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                <span>EV Smart Charger Management</span>
+                <span style="font-size: 1.1rem;">⚡</span>
+              </h3>
+              <p class="project-desc">
+                An architecture and monitoring dashboard for Electric Vehicle charging stations. Analyzes telemetry power curves, charging duration, load distribution, and energy consumption metrics.
+              </p>
+              <div class="project-tech-stack">
+                <span class="project-tech-pill">Python</span>
+                <span class="project-tech-pill">Telemetry</span>
+                <span class="project-tech-pill">Data Analytics</span>
+                <span class="project-tech-pill">Research Paper</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">Read Research</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View Repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Interactive AI Chatbot -->
+          <div class="project-card" data-category="ai fullstack">
+            <div class="project-preview">
+              <div class="project-banner-svg" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); color: #818cf8;">
+                <span>💬🤖✨</span>
+              </div>
+              <span class="project-tag-floating">Conversational AI</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">
+                <span>Conversational Campus Chatbot</span>
+                <span style="font-size: 1.1rem;">💬</span>
+              </h3>
+              <p class="project-desc">
+                A conversational agent built with automated response synthesis, intent parsing, query indexing, and an intuitive dark/light chat interface for real-time inquiry resolution.
+              </p>
+              <div class="project-tech-stack">
+                <span class="project-tech-pill">JavaScript</span>
+                <span class="project-tech-pill">Web APIs</span>
+                <span class="project-tech-pill">Responsive CSS</span>
+                <span class="project-tech-pill">Local Cache</span>
+              </div>
+              <div class="project-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">Try Bot</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">View Code ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Timeline Section -->
+    <section class="section" id="experience" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic & Experience</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-subtitle">My academic foundations and hands-on milestones.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">B-Tech in Information Technology (IT Engineer)</h3>
+                <span class="timeline-period">2025 - 2029</span>
+              </div>
+              <div class="timeline-company">Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune</div>
+              <div class="timeline-body">
+                <p>Comprehensive academic curriculum with emphasis on software engineering, algorithm design, system programming, database architecture, and web systems.</p>
+                <ul class="timeline-bullets">
+                  <li>Active developer across academic projects, technical hackathons, and software hubs.</li>
+                  <li>Core coursework: Data Structures, Object-Oriented Programming, Database Systems, Computer Networks.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Web Development & Software Engineering Projects</h3>
+                <span class="timeline-period">2025 - Present</span>
+              </div>
+              <div class="timeline-company">Engineering Practical & Self-Driven Portfolio</div>
+              <div class="timeline-body">
+                <p>Designed and built full-stack software products including AI Study Assistant, MMCOE SmartHub, and conversational interfaces.</p>
+                <ul class="timeline-bullets">
+                  <li>Built responsive frontends with HTML5, CSS3, modern JavaScript, and React components.</li>
+                  <li>Developed REST APIs in Node.js/Express with authentication and JSON/MongoDB datastores.</li>
+                  <li>Configured continuous deployments on Vercel and Netlify cloud platforms.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-role">Technical Research & Engineering Papers</h3>
+                <span class="timeline-period">2025 - Present</span>
+              </div>
+              <div class="timeline-company">Electric Vehicle (EV) Smart Charger Review - NYCSTEM</div>
+              <div class="timeline-body">
+                <p>Authored a comprehensive technical review focusing on EV charging telemetry, intelligent load monitoring, and power optimization architectures.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-subtitle">Interested in discussing an internship, project, or role? Send a message!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Contact Information</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6;">
+              I am actively seeking software development internships, full-time engineering roles, and innovative collaborations. Feel free to reach out directly through any of the channels below.
+            </p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon-box">✉️</div>
+                <div>
+                  <div class="contact-text-label">Email</div>
+                  <div class="contact-text-value">rohanpatil20077@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon-box">📍</div>
+                <div>
+                  <div class="contact-text-label">Location</div>
+                  <div class="contact-text-value">Pune, Maharashtra, India</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon-box">🎓</div>
+                <div>
+                  <div class="contact-text-label">Education</div>
+                  <div class="contact-text-value">MMCOE Pune (B-Tech IT)</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon-box">🌐</div>
+                <div>
+                  <div class="contact-text-label">GitHub</div>
+                  <div class="contact-text-value">github.com/rohan-patil</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="contactName" class="form-label">Your Name *</label>
+                <input type="text" id="contactName" class="form-control" placeholder="e.g. Alex Smith" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactEmail" class="form-label">Your Email *</label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="e.g. alex@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="contactSubject" class="form-label">Subject</label>
+                <input type="text" id="contactSubject" class="form-control" placeholder="e.g. Internship Opportunity / Collaboration" />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" class="form-label">Your Message *</label>
+                <textarea id="contactMessage" class="form-control" placeholder="Hi Rohan, I saw your portfolio and would love to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <span>🚀</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Resume Modal -->
+  <div class="modal-overlay" id="resumeModalOverlay">
+    <div class="resume-modal">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span style="font-size: 1.5rem;">📄</span>
+          <div>
+            <h3 style="font-size: 1.15rem; margin: 0;">Rohan Patil - Curriculum Vitae</h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Formatted Professional Resume</span>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary btn-sm" id="printResumeBtn">
+            <span>Print / Save PDF</span>
+            <span>🖨️</span>
+          </button>
+          <button class="close-modal-btn" id="closeResumeBtn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+
+      <div class="resume-paper" id="resumePaper">
+        <div class="resume-header">
+          <h1 class="resume-name">ROHAN PATIL</h1>
+          <p style="font-size: 1.1rem; color: var(--accent-secondary); font-weight: 600;">
+            Full-Stack Software Developer | IT Engineer
+          </p>
+          <div class="resume-contact-row">
+            <span>📍 Pune, India</span>
+            <span>📧 rohanpatil20077@gmail.com</span>
+            <span>🌐 github.com/rohan-patil</span>
+            <span>💼 linkedin.com/in/rohan-patil</span>
+          </div>
+        </div>
+
+        <!-- Section: Education -->
+        <div class="resume-section">
+          <h2 class="resume-section-title">Education</h2>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <span>B-Tech in Information Technology</span>
+              <span>2025 - 2029</span>
+            </div>
+            <div class="resume-entry-sub">Marathwada Mitra Mandal's College of Engineering (MMCOE), Pune</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+              Key Coursework: Data Structures & Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Operating Systems, Web Technologies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section: Technical Skills -->
+        <div class="resume-section">
+          <h2 class="resume-section-title">Technical Skills</h2>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <strong>Programming Languages:</strong> JavaScript (ES6+), Python, C++, HTML5, CSS3, SQL
+          </p>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <strong>Frameworks & Libraries:</strong> React.js, Node.js, Express.js, RESTful APIs
+          </p>
+          <p style="margin-bottom: 0.5rem; font-size: 0.9rem;">
+            <strong>Databases & Tools:</strong> MongoDB, MySQL, JSON DB, Git & GitHub, Postman, Vercel, VS Code
+          </p>
+          <p style="font-size: 0.9rem;">
+            <strong>Core Concepts:</strong> OOP, Data Structures, System Architecture, Agile Methodologies
+          </p>
+        </div>
+
+        <!-- Section: Featured Projects -->
+        <div class="resume-section">
+          <h2 class="resume-section-title">Key Projects</h2>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <span>AI Study Assistant Platform</span>
+              <span>Full-Stack Web & AI</span>
+            </div>
+            <div class="resume-entry-sub">Tech: Node.js, Express, JavaScript, AI API, CSS3</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-secondary);">
+              <li>Developed a comprehensive study assistance platform providing automated timetable generation, task tracking, and AI-assisted notes summarization.</li>
+              <li>Architected REST APIs with secure routing and clean JSON data persistence.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <span>MMCOE SmartHub 3.0 Campus Portal</span>
+              <span>Web & RESTful API</span>
+            </div>
+            <div class="resume-entry-sub">Tech: JavaScript, Express.js, REST API, JSON Store</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-secondary);">
+              <li>Engineered a centralized college portal providing student directory management and department announcement feeds.</li>
+              <li>Implemented modular API endpoints for decoupled frontend and backend maintenance.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <span>EV Smart Charger Telemetry Management</span>
+              <span>Systems & Analytics</span>
+            </div>
+            <div class="resume-entry-sub">Tech: Python, Data Analytics, IoT Telemetry Review</div>
+            <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-secondary);">
+              <li>Authored an engineering research review on electric vehicle charging station monitoring, telemetry signals, and power optimization curves.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section: Certifications & Activities -->
+        <div class="resume-section">
+          <h2 class="resume-section-title">Achievements & Certifications</h2>
+          <ul style="padding-left: 1.25rem; font-size: 0.88rem; color: var(--text-secondary);">
+            <li>Active participant in collegiate coding challenges and technical symposiums.</li>
+            <li>Hands-on experience deploying production-ready full-stack projects on Vercel and Netlify.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="nav-brand">
+        <span class="brand-badge">RP</span>
+        <span>Rohan Patil</span>
+      </a>
+
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="mailto:rohanpatil20077@gmail.com" class="hero-social-link" title="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 Rohan Patil. Built with semantic HTML, vanilla CSS & modern JavaScript. Ready to deploy on Vercel.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
